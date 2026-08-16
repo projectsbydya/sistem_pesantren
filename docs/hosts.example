@@ -1,0 +1,64 @@
+# ============================================
+# SaaS Multi-Tenant Local Development Hosts
+# ============================================
+# Copy isi file ini ke:
+# Windows: C:\Windows\System32\drivers\etc\hosts (Run as Admin)
+# Mac/Linux: /etc/hosts (sudo)
+#
+# Setelah edit, flush DNS:
+# Windows: ipconfig /flushdns
+# Mac: sudo killall -HUP mDNSResponder
+# Linux: sudo systemctl restart NetworkManager
+# ============================================
+
+127.0.0.1   localhost
+127.0.0.1   sistem-pesantren.test
+
+# ============================================
+# Tenant Subdomains (sesuai data seeder)
+# ============================================
+
+# Pesantren 1: Ponpes Al-Ihsan
+127.0.0.1   alihsan.localhost
+127.0.0.1   ponpes-al-ihsan.localhost
+127.0.0.1   alihsan.test
+127.0.0.1   www.alihsan.test
+
+# Pesantren 2: Darul Falah
+127.0.0.1   darulfalah.localhost
+127.0.0.1   darul-falah.localhost
+127.0.0.1   darulfalah.test
+127.0.0.1   www.darulfalah.test
+
+# ============================================
+# Custom Domain Examples (optional)
+# ============================================
+127.0.0.1   alihsan.sch.id
+127.0.0.1   ppdb.alihsan.sch.id
+127.0.0.1   admin.alihsan.sch.id
+
+127.0.0.1   darulfalah.sch.id
+127.0.0.1   ppdb.darulfalah.sch.id
+
+# ============================================
+# Testing Subdomains
+# ============================================
+127.0.0.1   tenant1.localhost
+127.0.0.1   tenant2.localhost
+127.0.0.1   tenant3.localhost
+127.0.0.1   demo.localhost
+127.0.0.1   test.localhost
+127.0.0.1   dev.localhost
+
+# ============================================
+# ngrok / Serveo Testing (dinamis)
+# Uncomment jika menggunakan ngrok:
+# 127.0.0.1   alihsan.ngrok.io
+# 127.0.0.1   darulfalah.ngrok.io
+# ============================================
+
+# ============================================
+# Laragon Auto (jika menggunakan Laragon)
+# Laragon otomatis handle *.test domains
+# Tidak perlu tambahkan manual
+# ============================================

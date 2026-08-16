@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] { display: none !important; }
+
+/*
+ * @tailwindcss/forms sets base styles like [type='text'] { padding: .5rem .75rem; }.
+ * That selector has specificity (0,1,1), equal to or higher than .pl-10 (0,1,0),
+ * so the forms plugin overrides explicit Tailwind padding utilities on inputs.
+ * Restore the intended utility padding for form inputs at the utilities layer.
+ */
+@layer utilities {
+    :is(input, textarea, select).pl-10 {
+        padding-left: 2.5rem;
+    }
+}

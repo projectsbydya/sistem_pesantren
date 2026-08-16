@@ -1,0 +1,55 @@
+*.log
+.DS_Store
+.env
+.env.local
+.env.backup
+.env.production
+.env.landing
+.phpactor.json
+.phpunit.result.cache
+/.cursor/
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/auth.json
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+_ide_helper.php
+Homestead.json
+Homestead.yaml
+Thumbs.db
+*.sql
+
+# Test suite (not deployed to production)
+/tests
+
+# Test output files
+test-*.txt
+
+# Log & output files
+migrate-output.txt
+migration_log.txt
+composer-*.txt
+vendor-publish-output.txt
+
+# Backup files
+*.backup
+README.md.backup
+
+# Accidental shell-redirect artifacts (e.g. unescaped `>` in `php artisan tinker`
+# commands creating files named after the redirected command/output)
+*::*
+->*
+
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+
+# Local/demo seed data
+/database/seeders/SaaSSeeder.php
